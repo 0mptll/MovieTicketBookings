@@ -1,20 +1,25 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdateMovieForm.aspx.cs" Inherits="MovieTicketBooking.UpdateMovieForm" %>
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdateMovieForm.aspx.cs" Inherits="MovieTicketBooking.UpdateMovieForm" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="~/Styles/UpdateMovieForm.css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="lblHeading" runat="server" Text="Update Movie"></asp:Label>
             <br />
+            <br />
             <asp:Label ID="lblSelectMovie" runat="server" Text="Select Movie"></asp:Label>
-&nbsp;<asp:DropDownList ID="ddlMovies" runat="server">
+            <br />
+            &nbsp;
+            <asp:DropDownList ID="ddlMovies" runat="server">
             </asp:DropDownList>
 &nbsp;<asp:Button ID="btnFetch" runat="server" CausesValidation="False" OnClick="btn_clk_fetch" Text="Fetch Details" />
+            <br />
             <br />
             <asp:Panel ID="panelDetails" runat="server" Visible="False">
                 <asp:Label ID="lblTitle" runat="server" Text="Title"></asp:Label>
@@ -32,7 +37,8 @@
                 <asp:FileUpload ID="FileUpload" runat="server" />
                 &nbsp;<asp:Button ID="btn_preview" runat="server" OnClick="btn_clk_preview" Text="Preview" />
                 <br />
-                <asp:Image ID="imgPoster" runat="server" Width="100px" />
+                <br />
+                <asp:Image ID="imgPoster" runat="server" />
                 <br />
                 <asp:Label ID="lblActive" runat="server" Text="Is Active"></asp:Label>
 &nbsp;&nbsp;<asp:RadioButtonList ID="rblActive" runat="server">

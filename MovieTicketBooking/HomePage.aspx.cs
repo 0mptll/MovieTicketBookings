@@ -16,7 +16,7 @@ namespace MovieTicketBooking
         {
             if (!IsPostBack)
             {
-                lblWelcome.Text = "Welcome, " + Session["UserName"].ToString();
+                lblWelcome.Text = "Welcome, ";
                 LoadMovies();
                 CheckAdminRole();
             }
@@ -27,7 +27,7 @@ namespace MovieTicketBooking
             string connectionString = WebConfigurationManager.ConnectionStrings["MovieDbContext"].ConnectionString;
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Movies", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Movies WHERE IsActive = 1", con);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 StringBuilder movieList = new StringBuilder();
@@ -40,14 +40,14 @@ namespace MovieTicketBooking
                     string posterUrl = ResolveUrl("~/UploadedPhotos/" + poster);
 
                     movieList.Append("<div class='movie-item'>");
-                    movieList.Append($"<label for='movie_{movieId}'>");
-                    movieList.Append($"<img src='{posterUrl}' alt='{title}' style='width:100px;height:auto;' />");
-                    movieList.Append("<br>");
-                    movieList.Append($"<input type='radio' id='movie_{movieId}' name='rblMovies' value='{movieId}' />");
+                    movieList.Append($"<img src='{posterUrl}' alt='{title}' style='width: 100%; height: 200px; object-fit: cover; border-radius: 8px;' />");
+                    movieList.Append("<div style='display: flex; flex-direction: column; justify-content: flex-end; height: 100%; padding: 10px;'>");
+                    movieList.Append($"<input type='radio' id='movie_{movieId}' name='rblMovies' value='{movieId}' style='margin-bottom: 10px; accent-color: #3498db;' />");
                     movieList.Append($"<input type='hidden' id='title_{movieId}' name='title_{movieId}' value='{title}' />");
-                    movieList.Append($"<span>{title}</span>");
-                    movieList.Append("</label>");
+                    movieList.Append($"<span style='display: block; font-size: 25px; font-weight: 600; color: #34495e; text-align: center;'>{title}</span>");
                     movieList.Append("</div>");
+                    movieList.Append("</div>");
+
                 }
 
                 ltlMovieList.Text = movieList.ToString();

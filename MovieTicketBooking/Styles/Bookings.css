@@ -1,0 +1,144 @@
+﻿/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4b6cb7, #182848); /* Example gradient background */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Container */
+#form1 {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 100px auto;
+}
+
+/* Heading Label */
+#lblHeading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* GridView Styling */
+#gdvBookings {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    /* Header Row Styles */
+    #gdvBookings th {
+        background-color: #4A3C8C;
+        color: #E7E7FF;
+        font-weight: bold;
+        padding: 12px;
+        text-align: left;
+    }
+
+    /* Grid Row Styles */
+    #gdvBookings td {
+        background-color: #DEDFDE;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Hover Effect on Rows */
+    #gdvBookings tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Selected Row Styling */
+    #gdvBookings .selected {
+        background-color: #9471DE !important;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Pagination and Sorting Styles */
+    #gdvBookings .pager {
+        background-color: #C6C3C6;
+        color: black;
+        text-align: right;
+        padding: 10px;
+    }
+
+    #gdvBookings .sorted-asc {
+        background-color: #594B9C;
+    }
+
+    #gdvBookings .sorted-desc {
+        background-color: #33276A;
+    }
+
+    /* Modify Button Styles */
+    #gdvBookings .action-buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+
+        #gdvBookings .action-buttons button {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+            #gdvBookings .action-buttons button:hover {
+                background-color: #2980b9;
+            }
+
+/* Update Button in Modify Panel */
+#btnUpdate {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    #btnUpdate:hover {
+        background-color: #2ecc71;
+    }
+
+/* Message Label */
+#lblMessage {
+    font-size: 16px;
+    color: #e74c3c;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #form1 {
+        padding: 30px;
+        width: 90%;
+    }
+
+    #lblHeading {
+        font-size: 28px;
+    }
+
+    #gdvBookings th, #gdvBookings td {
+        font-size: 14px;
+    }
+
+    #btnUpdate {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

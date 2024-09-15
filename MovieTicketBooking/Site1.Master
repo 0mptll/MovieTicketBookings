@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MovieTicketBooking.Site1" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server"></asp:ContentPlaceHolder></title>
+    <link rel="stylesheet" type="text/css" href="~/Styles/HomePage.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page-container">
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><asp:HyperLink ID="hlSchedule" runat="server" NavigateUrl="Schedule.aspx" CssClass="nav-link">View Schedule</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="hlBookings" runat="server" NavigateUrl="Bookings.aspx" CssClass="nav-link">Booking Records</asp:HyperLink></li>
+
+                    <!-- Admin panel for adding/updating movies, visible only for admins -->
+                    <asp:Panel ID="pnlAdmin" runat="server" Visible="False">
+                        <li><asp:HyperLink ID="hlAddMovie" runat="server" NavigateUrl="AddMovieForm.aspx" CssClass="nav-link">Add Movie</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="hlUpdateMovie" runat="server" NavigateUrl="UpdateMovieForm.aspx" CssClass="nav-link">Update Movie</asp:HyperLink></li>
+                    </asp:Panel>
+
+                    <!-- Logout Button -->
+                    <li><asp:Button ID="btnLogOut" runat="server" CausesValidation="False" OnClick="btn_clk_LogOut" Text="Logout" CssClass="nav-button" /></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content Placeholder -->
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

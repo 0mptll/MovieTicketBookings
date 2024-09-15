@@ -24,6 +24,15 @@ namespace MovieTicketBooking
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// vsAddMovieErrors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsAddMovieErrors;
+
+        /// <summary>
         /// lblHeading control.
         /// </summary>
         /// <remarks>
@@ -51,6 +60,15 @@ namespace MovieTicketBooking
         protected global::System.Web.UI.WebControls.TextBox tbTitle;
 
         /// <summary>
+        /// rfvTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTitle;
+
+        /// <summary>
         /// lblGenre control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace MovieTicketBooking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbGenre;
+
+        /// <summary>
+        /// rfvGenre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvGenre;
 
         /// <summary>
         /// lblDuration control.
@@ -87,6 +114,24 @@ namespace MovieTicketBooking
         protected global::System.Web.UI.WebControls.TextBox tbDuration;
 
         /// <summary>
+        /// rfvDuration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDuration;
+
+        /// <summary>
+        /// rvDuration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvDuration;
+
+        /// <summary>
         /// lblDate control.
         /// </summary>
         /// <remarks>
@@ -105,6 +150,33 @@ namespace MovieTicketBooking
         protected global::System.Web.UI.WebControls.TextBox tbDate;
 
         /// <summary>
+        /// rfvDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDate;
+
+        /// <summary>
+        /// revDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDate;
+
+        /// <summary>
+        /// lblPoster control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPoster;
+
+        /// <summary>
         /// FileUpload control.
         /// </summary>
         /// <remarks>
@@ -112,6 +184,15 @@ namespace MovieTicketBooking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload;
+
+        /// <summary>
+        /// rfvFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFileUpload;
 
         /// <summary>
         /// btnAdd control.

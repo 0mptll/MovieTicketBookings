@@ -1,0 +1,300 @@
+﻿/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Elegant gradient */
+    margin: 0;
+    padding: 20px 0; /* Added top padding */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    background-attachment: fixed;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+/* Form Container */
+#form1 {
+    background: #f9f9f9;
+    padding: 40px 40px 20px; /* More padding at the top and reduced bottom padding */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    margin-top: 20px; /* Additional margin from the top */
+    margin-bottom: 10px; /* Reduced margin at the bottom */
+}
+
+    #form1:hover {
+        transform: scale(1.02); /* Slight scale-up on hover */
+    }
+
+/* Section Heading */
+#lblHeading {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Label Styling */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #34495e;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Select Dropdown Styling */
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff; /* White background for the dropdown */
+    transition: border-color 0.3s ease;
+    appearance: none; /* Remove the default browser arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="5" viewBox="0 0 4 5"><path fill="%233d3d3d" d="M2 0L0 2h4zM2 5L0 3h4z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+    select:focus {
+        border-color: #3498db;
+        outline: none;
+        box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Focus shadow */
+    }
+
+    select:hover {
+        border-color: #3498db;
+    }
+
+/* Input Fields */
+input[type="text"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin-bottom: 25px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="password"]:focus {
+        border-color: #3498db;
+        background-color: #fff;
+        outline: none;
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.4); /* Subtle shadow on focus */
+    }
+
+/* File Upload Styling */
+input[type="file"] {
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Validation Summary */
+#vsAddMovieErrors {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Success/Failure Messages */
+#lblMessage {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    color: #2ecc71; /* Success message color */
+}
+/* Buttons */
+input[type="submit"] {
+    background: linear-gradient(135deg, #3498db, #2c3e50); /* Gradient background */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Full width button */
+    margin-top: 20px;
+}
+
+    input[type="submit"]:hover {
+        background: linear-gradient(135deg, #2980b9, #34495e); /* Darker gradient on hover */
+        transform: translateY(-3px); /* Lift effect on hover */
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+
+    input[type="submit"]:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.4); /* Focus shadow */
+    }
+
+/* Specific Styling for Different Buttons */
+#btnFetch {
+    background: linear-gradient(135deg, #e67e22, #d35400); /* Gradient for Fetch Details button */
+}
+
+    #btnFetch:hover {
+        background: linear-gradient(135deg, #d35400, #c0392b); /* Darker gradient on hover */
+    }
+
+#btn_preview {
+    background: linear-gradient(135deg, #2ecc71, #27ae60); /* Gradient for Preview button */
+}
+
+    #btn_preview:hover {
+        background: linear-gradient(135deg, #27ae60, #1e8449); /* Darker gradient on hover */
+    }
+
+#btnUpdate {
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Gradient for Update button */
+}
+
+    #btnUpdate:hover {
+        background: linear-gradient(135deg, #2980b9, #2471a3); /* Darker gradient on hover */
+    }
+
+/* Responsive Design for Buttons */
+@media (max-width: 768px) {
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Movie Poster Styling */
+#imgPoster {
+    display: block;
+    width: 100%;
+    max-width: 500px; /* Increase the max-width to make the poster larger */
+    height: auto; /* Maintain aspect ratio */
+    margin: 30px auto; /* Add more spacing for better visibility */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow to highlight the poster */
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+}
+
+    #imgPoster:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+/* Radio Button Group */
+#rblActive {
+    border-collapse: collapse; /* Remove gaps between cells */
+    margin: 20px 0; /* Add spacing above and below the table */
+    width: 100%; /* Make the table full-width */
+}
+
+    #rblActive td {
+        padding: 10px 15px; /* Add padding for spacing */
+        border: none; /* Remove default table cell borders */
+    }
+
+    #rblActive input[type="radio"] {
+        appearance: none; /* Remove default styling */
+        width: 20px; /* Set a fixed size for the radio button */
+        height: 20px; /* Set a fixed size for the radio button */
+        border: 2px solid #3498db; /* Border color */
+        border-radius: 50%; /* Make it circular */
+        outline: none; /* Remove default focus outline */
+        cursor: pointer; /* Show pointer cursor on hover */
+        position: relative; /* Position relative for the pseudo-element */
+        background: white; /* Background color */
+        transition: background 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    }
+
+        #rblActive input[type="radio"]:checked::before {
+            content: ''; /* Create a pseudo-element */
+            position: absolute; /* Position it absolutely within the radio button */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            width: 10px; /* Inner dot size */
+            height: 10px; /* Inner dot size */
+            background: #3498db; /* Dot color */
+            border-radius: 50%; /* Make it circular */
+            transform: translate(-50%, -50%); /* Center the dot */
+        }
+
+    #rblActive label {
+        font-size: 16px; /* Font size for the labels */
+        color: #34495e; /* Text color */
+        margin-left: 8px; /* Space between radio button and label text */
+        cursor: pointer; /* Show pointer cursor on hover */
+        display: inline-block; /* Keep labels inline */
+        transition: color 0.3s ease; /* Smooth text color transition */
+    }
+
+        #rblActive label:hover {
+            color: #3498db; /* Change text color on hover */
+        }
+
+
+/* Movie Gallery Container */
+.movie-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of movie items to new rows */
+    gap: 20px; /* Space between movie items */
+    justify-content: center; /* Center the movie items horizontally */
+    padding: 20px; /* Padding around the gallery */
+    box-sizing: border-box;
+}
+
+/* Movie Item Container */
+.movie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 200px; /* Fixed width for uniformity */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Movie Poster Image */
+.movie-poster {
+    width: 100%;
+    height: 150px; /* Fixed height to ensure uniformity */
+    object-fit: cover; /* Maintain aspect ratio while filling the box */
+    border-radius: 8px;
+}
+
+/* Movie Title */
+.movie-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #34495e;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Radio Button */
+.movie-item input[type="radio"] {
+    margin-top: 10px;
+}

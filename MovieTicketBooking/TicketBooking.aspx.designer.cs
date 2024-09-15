@@ -24,6 +24,15 @@ namespace MovieTicketBooking
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// vsBookingErrors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsBookingErrors;
+
+        /// <summary>
         /// lblHeading control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace MovieTicketBooking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbSeats;
+
+        /// <summary>
+        /// rfvSeats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSeats;
 
         /// <summary>
         /// rvSeats control.

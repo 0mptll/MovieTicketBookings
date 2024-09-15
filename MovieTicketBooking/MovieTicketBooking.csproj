@@ -75,10 +75,21 @@
     </Content>
     <Content Include="Bookings.aspx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\Bg.png" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MovieSchedule.aspx" />
     <Content Include="Schedule.aspx" />
     <Content Include="SignUpPage.aspx" />
+    <Content Include="Styles\HomePage.css" />
+    <Content Include="Styles\LoginPage.css" />
+    <Content Include="Styles\SignUpPage.css" />
+    <Content Include="Styles\AddMovieForm.css" />
+    <Content Include="Styles\Schedule.css" />
+    <Content Include="Styles\Bookings.css" />
+    <Content Include="Styles\MovieSchedule.css" />
+    <Content Include="Styles\AddSchedule.css" />
+    <Content Include="Styles\TicketBooking.css" />
+    <Content Include="Styles\UpdateMovieForm.css" />
     <Content Include="TicketBooking.aspx" />
     <Content Include="UpdateMovieForm.aspx" />
     <Content Include="Web.config" />
@@ -133,6 +144,13 @@
     <Compile Include="SignUpPage.aspx.designer.cs">
       <DependentUpon>SignUpPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
     <Compile Include="TicketBooking.aspx.cs">
       <DependentUpon>TicketBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -158,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,6 +184,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,0 +1,117 @@
+﻿/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Form Container */
+#form1 {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    #form1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+    }
+
+/* Form Heading */
+#lblHeading {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px; /* Increased spacing between title and the first input field */
+    letter-spacing: 1px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 15px;
+}
+
+    /* Focus State */
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus {
+        border-color: #9b59b6;
+        outline: none;
+        box-shadow: 0 0 8px rgba(155, 89, 182, 0.3);
+    }
+
+/* Submit Button */
+input[type="submit"],
+.aspNetButton {
+    background-color: #9b59b6;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    input[type="submit"]:hover,
+    .aspNetButton:hover {
+        background-color: #8e44ad;
+        transform: translateY(-2px);
+    }
+
+/* Validation Summary */
+.validation-summary-errors {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #e74c3c;
+    font-size: 14px;
+}
+
+/* Error Message Styling */
+.error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Hyperlink Styles */
+#hlLogin {
+    color: #3498db;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+    #hlLogin:hover {
+        text-decoration: underline;
+    }
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    #form1 {
+        padding: 20px;
+        width: 90%;
+    }
+}
